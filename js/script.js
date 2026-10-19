@@ -2,7 +2,7 @@
 // Uses the OMDb API: https://www.omdbapi.com/
 // Get a free API key here: https://www.omdbapi.com/apikey.aspx
 
-const apiKey = "a3098a7e";
+const apiKey = "YOUR_API_KEY";
 const apiUrl = "https://www.omdbapi.com/";
 
 
