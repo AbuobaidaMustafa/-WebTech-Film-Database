@@ -1,0 +1,193 @@
+/* WebTech Film Database - my styles
+   Written mobile first: the normal rules are for phones,
+   the media queries at the bottom change things for bigger screens. */
+
+/* Colours */
+:root {
+  --blue: #1d1a45;
+  --red: #f33535;
+  --dark-red: #c01f1f;
+  --pale-blue: #dbeaf1;
+}
+
+/* Element selectors */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--pale-blue);
+  color: var(--blue);
+}
+
+h1, h2, h3 {
+  color: var(--blue);
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  border-bottom: 3px solid var(--red);
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+legend {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+footer {
+  background-color: var(--blue);
+  color: white;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+footer a {
+  color: white;
+}
+
+/* Class selectors */
+.navbar {
+  background-color: white;
+  border-bottom: 4px solid var(--red);
+}
+
+.nav-link {
+  color: var(--blue);
+  font-weight: bold;
+}
+
+.red {
+  color: var(--red);
+}
+
+.intro {
+  padding: 25px 0 10px;
+}
+
+.box {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.btn-main {
+  background-color: var(--blue);
+  color: white;
+  font-weight: bold;
+}
+
+.error {
+  color: var(--dark-red);
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.success {
+  color: green;
+  font-weight: bold;
+}
+
+.film-card {
+  border: 2px solid var(--pale-blue);
+  cursor: pointer;
+  height: 100%;
+}
+
+.film-card img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.skip-link {
+  position: absolute;
+  top: -50px;
+  left: 10px;
+  background-color: var(--blue);
+  color: white;
+  padding: 8px 12px;
+  z-index: 100;
+}
+
+/* ID selectors */
+#message {
+  font-style: italic;
+}
+
+#reviewList li {
+  border-left: 4px solid var(--red);
+}
+
+/* Pseudo-classes */
+.skip-link:focus {
+  top: 10px;
+  color: white;
+}
+
+.nav-link:hover {
+  color: var(--red);
+}
+
+.btn-main:hover {
+  background-color: var(--red);
+  color: white;
+}
+
+.film-card:hover {
+  border-color: var(--red);
+}
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+.film-card:focus {
+  outline: 3px solid var(--red);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+#reviewList li:nth-child(even) {
+  background-color: var(--pale-blue);
+}
+
+/* Attribute selectors */
+input[required],
+select[required],
+textarea[required] {
+  border-left: 4px solid var(--blue);
+}
+
+input[type="radio"]:checked,
+input[type="checkbox"]:checked {
+  background-color: var(--blue);
+  border-color: var(--blue);
+}
+
+a[href^="https"] {
+  text-decoration: underline;
+}
+
+/* Bigger screens (tablets and up) */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  .box {
+    padding: 30px;
+  }
+}
+
+/* Large screens */
+@media (min-width: 992px) {
+  .intro {
+    padding: 40px 0 20px;
+  }
+}
